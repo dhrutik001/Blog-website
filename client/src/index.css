@@ -1,0 +1,59 @@
+.app{
+
+}
+.header{
+    background-color:#eec0c0;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.body{
+    background-color:#d55;    
+}
+
+/* footer component */
+.footer {
+    color:#fff;
+    background-color: #533;
+    text-align: start;
+    padding: 5px 0px;    
+}
+
+.footer > .container-fluid{
+    padding: 25px 0px 0;
+}
+
+.links{
+  padding: 5px 0px 5px;
+  text-align-last: center;
+}
+
+.add{
+  padding: 5px 0px 15px;
+  text-align: center;
+}
+
+address {
+  font-size: 90%;
+  margin: 0px;
+  
+}
+
+.justify-content-center{
+  padding: 30px 0px;
+}
+
+.justify-content-center > p {
+  color: #fff;
+  font-size: 90%;
+  font-style: oblique;
+}
+
+a {
+    color: white;
+    text-decoration: solid;
+}
+
+a:hover{
+    color: white;
+}
