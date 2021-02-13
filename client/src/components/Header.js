@@ -2,7 +2,7 @@ const Header = () => {
     return (
         <nav className="header navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Blog</a>
+                <a className="navbar-brand" href="/">Blog</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +31,7 @@ const Header = () => {
                     <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Add Blog</a>
                     </li> */}
                     <li className="nav-item">
-                    <a className="nav-link active" href="#">About Us</a>
+                    <a className="nav-link active" href="/aboutus">About Us</a>
                     </li>
                 </ul>
                 {/* <form className="d-flex">

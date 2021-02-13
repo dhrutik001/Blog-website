@@ -13,10 +13,10 @@ export default function CreatePost(){
             title: title,
             text: text,
         })
+        // console.log("submited");
     }
 
     useEffect(() => {
-        // console.log("hello world");
         // console.log(author + title + text);
         // effect
         // return () => {
