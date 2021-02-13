@@ -1,26 +1,24 @@
 .app{
 
 }
+
+/* header */
 .header{
-    background-color:#eec0c0;
+    background-color:#aab;
     padding-right: 30px;
     padding-left: 30px;
 }
-
+/* body */
 .body{
-    background-color:#d55;    
+    background-color:#777;    
 }
 
 /* footer component */
 .footer {
     color:#fff;
-    background-color: #533;
+    background-color: #aaa;
     text-align: start;
-    padding: 5px 0px;    
-}
-
-.footer > .container-fluid{
-    padding: 25px 0px 0;
+    padding: 15px 0px;    
 }
 
 .links{
@@ -56,4 +54,36 @@ a {
 
 a:hover{
     color: white;
+}
+
+/* createpost */
+.createPost{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  /* height: calc(  90vh - 80px); */
+}
+
+.uploadPost{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  /* height: 400px; */
+  width: 600px;
+  border: 2px solid #aaa;
+  font-size:23px;
+}
+
+.uploadPost > textarea {
+  height: 300px;
+  width: 90%;
+}
+
+.uploadPost > input {
+  margin-bottom :15px;
+  width:90%;
+  height: 40px;
+
 }

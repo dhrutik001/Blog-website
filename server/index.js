@@ -1,5 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
+
 
 const app = express();
 const PORT = 3001;
@@ -11,14 +13,24 @@ mongoose.connect(connection_url, {useNewUrlParser: true, useUnifiedTopology: tru
     .then((result) => console.log('connected to database'))
     .catch((err) => console.log(err));
 
+app.use(cors());
+app.use(express.json());
+
 app.get('/', (req, res) => {
 
     // render all blog from db
 
-    // res.send('Hello world');
+    res.send('Hello world');
 });
 
 app.post('api/create', (req, res) => {
+
+    const author = req.body.author;
+    const title = req.body.title;
+    const text = req.body.text;
+
+    console.log("hello world");
+    console.log(author + title + text);
 
     // post blog to db 
 

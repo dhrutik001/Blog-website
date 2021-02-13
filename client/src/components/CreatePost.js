@@ -5,50 +5,49 @@ export default function CreatePost(){
 
     const [author, setAuthor] = useState("")
     const [title, setTitle] = useState("")
-    const [body, setBody] = useState("")
+    const [text, setText] = useState("")
 
     const submitPost = () => {
-        Axios.post("http://localhost:3001/api/create", {
+        Axios.post('http://localhost:3001/api/create', {
             author: author,
             title: title,
-            body: body
+            text: text,
         })
     }
 
-    // useEffect(() => {
-    //     console.log(author + title + body);
-    //     // effect
-    //     // return () => {
-    //     //     cleanup
-    //     // }
-    // }, [author, title, body])
+    useEffect(() => {
+        // console.log("hello world");
+        // console.log(author + title + text);
+        // effect
+        // return () => {
+        //     cleanup
+        // }
+    }, [author, title, text])
 
     return(
-        <div className="createpost">
+        
+        <div className="createPost">
             <div className="uploadPost">
-                <lable>Title</lable>
+                Title
                 <input type="text"
                     onChange={(e) => {
                         setTitle(e.target.value);
                     }}
                 />
-
-                <lable>Author</lable>
+                Author
                 <input type="text"
                     onChange={(e) => {
                         setAuthor(e.target.value);
                     }}
                 />
-
-                <lable>Body</lable>                
-                <textarea type="textarea"
+                Text
+                <textarea type="textarea row-3"                    
                     onChange={(e) => {
-                        setBody(e.target.value);
+                        setText(e.target.value);
                     }}
                 />
 
-                <button onClick={submitPost}> Submit Blog </button>
-
+                <button className="btn btn-outline-dark col-4 align-self-center m-2" onClick={submitPost}> Submit Blog </button>
             </div>            
         </div>
     )

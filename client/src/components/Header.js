@@ -25,13 +25,13 @@ const Header = () => {
                         </ul>
                     </li> */}
                     <li className="nav-item">
-                    <a className="nav-link" href="/createpost">Create Blog</a>
+                    <a className="nav-link active" href="/createpost">Create Blog</a>
                     </li>
                     {/* <li className="nav-item">
                     <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Add Blog</a>
                     </li> */}
                     <li className="nav-item">
-                    <a className="nav-link" href="#">About Us</a>
+                    <a className="nav-link active" href="#">About Us</a>
                     </li>
                 </ul>
                 {/* <form className="d-flex">
