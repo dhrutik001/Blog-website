@@ -23,13 +23,14 @@ app.get('/', (req, res) => {
     res.send('Hello world');
 });
 
-app.post('api/create', (req, res) => {
+app.post('/api/create', (req, res) => {
 
     const author = req.body.author;
     const title = req.body.title;
     const text = req.body.text;
 
-    console.log("hello world");
+    // console.log("data posted");
+    // res.send('api/create');
     console.log(author + title + text);
 
     // post blog to db 
