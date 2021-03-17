@@ -19,15 +19,30 @@ app.use(express.json());
 
 app.get('/api/get', (req, res) => {
 
-    // render all blog from db
+    // render all blogs from db
     blogs.find({}, (err, data) => {
         // console.log('find');
-        console.log(data);
+        // console.log(data);
         res.send(data);
     })
     
     // res.send('Hello world');
 });
+
+app.get('/api/post/:id', (req, res) => {
+    // render blog by Id from db
+
+    const id = req.params.id;
+
+    blogs.find({_id: id}, (err, data) => {
+        // console.log('find');
+        // console.log(data);
+        res.send(data);
+    })
+    
+    // // res.send('Hello world');
+});
+
 
 app.post('/api/create', (req, res) => {
 
@@ -41,10 +56,31 @@ app.post('/api/create', (req, res) => {
     const blog = new blogs({
         title: title,
         author: author,
-        body: text
+        body: text,
+        like: 0
     });
     blog.save();
 });
+
+app.post('/api/like/:id', (req, res) => {
+    const id = req.params.id;
+    let likes;
+    // console.log(likes);
+    blogs.find({_id:id}, (err, data) => {
+        if(err)
+            likes = 0;
+        else{
+            likes = data[0].like;
+        }
+        blogs.updateOne({_id: id}, {like: likes+1}, (err)=>{
+            // console.log(likes+1);
+            if(err){
+                console.log(err);
+            }        
+        });
+    });
+
+})
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

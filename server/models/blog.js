@@ -12,6 +12,10 @@ const blogSchema = new mongoose.Schema({
     body: {
         type: String,
         require: true
+    },
+    like: {
+        type:Number,
+        default: 0        
     }
 }, { timestamps: true });
 

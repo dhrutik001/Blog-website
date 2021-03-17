@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import CreatePost from './components/CreatePost';
+import Post from './components/Post';
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
           <Route path='/createpost'>
             <CreatePost />
           </Route>
-        
+          <Route path='/post/:postId' render={(props) => <Post />} />        
         </Switch>
         
         <Footer />
