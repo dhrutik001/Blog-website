@@ -1,16 +1,19 @@
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const blogs = require('./models/blog');
 
+// Initializing express app
 const app = express();
-const PORT = 3001;
 
-// Connect to mongodb
-// const connection_url = 'mongodb+srv://dhrup:1234567890dhru@cluster0.gsf5c.mongodb.net/Notes?retryWrites=true&w=majority';
-const connection_url = 'mongodb://localhost/blogs';
+// Environment variables
+const PORT = process.env.PORT || 5000;
+const DBURI = process.env.DBURI;
 
-mongoose.connect(connection_url, {useNewUrlParser: true, useUnifiedTopology: true })
+// Connection with mongodb
+mongoose.connect(DBURI, {useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => console.log('connected to database'))
     .catch((err) => console.log(err));
 
