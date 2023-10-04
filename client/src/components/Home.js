@@ -8,14 +8,14 @@ const Home = () => {
     const [postList, setPostList] = useState([]);
     let history = useHistory();
     const Like = (id) => {
-        Axios.post(`https://upgraded-meme-9w97qv794qgc99xq-5001.app.github.dev/api/like/${id}`)
+        Axios.post(`https://blog-website-backend-h0kv.onrender.com/api/like/${id}`)
         .then((data) => {
             alert("you liked a post");
         });
     };
 
     useEffect(() => {
-        Axios.get("https://upgraded-meme-9w97qv794qgc99xq-5001.app.github.dev/api/get")
+        Axios.get("https://blog-website-backend-h0kv.onrender.com/api/get")
         .then((data) => {            
             // console.log(data);
             setPostList(data.data);
