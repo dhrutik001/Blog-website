@@ -8,14 +8,14 @@ const Home = () => {
     const [postList, setPostList] = useState([]);
     let history = useHistory();
     const Like = (id) => {
-        Axios.post(`http://localhost:5000/api/like/${id}`)
+        Axios.post(`https://upgraded-meme-9w97qv794qgc99xq-5001.app.github.dev/api/like/${id}`)
         .then((data) => {
             alert("you liked a post");
         });
     };
 
     useEffect(() => {
-        Axios.get("http://localhost:5000/api/get")
+        Axios.get("https://upgraded-meme-9w97qv794qgc99xq-5001.app.github.dev/api/get")
         .then((data) => {            
             // console.log(data);
             setPostList(data.data);

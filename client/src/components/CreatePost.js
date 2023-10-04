@@ -8,7 +8,7 @@ export default function CreatePost(){
     const [text, setText] = useState("")
 
     const submitPost = () => {
-        Axios.post('http://localhost:5000/api/create', {
+        Axios.post('https://blog-website-backend-h0kv.onrender.com/api/create', {
             author: author,
             title: title,
             text: text,

@@ -8,7 +8,7 @@ export default function Post(){
     const [post, setPost] = useState({});
 
     useEffect(() => {
-        Axios.get(`http://localhost:5000/api/post/${postId}`)
+        Axios.get(`https://blog-website-backend-h0kv.onrender.com/api/post/${postId}`)
         .then((data) => {
             // console.log(data);
             setPost({tit: data.data[0].title, auth: data.data[0].author, txt: data.data[0].body});
